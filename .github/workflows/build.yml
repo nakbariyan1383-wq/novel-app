@@ -3,6 +3,9 @@ name: Build Novel APK
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,18 +23,17 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.19.0'
+          flutter-version: '3.24.0'
           channel: 'stable'
-          cache: true
-
-      - name: Get Dependencies
-        run: flutter pub get
 
       - name: Build APK
-        run: flutter build apk --split-per-abi
+        run: flutter build apk --release
 
-      - name: Upload APK
-        uses: actions/upload-artifact@v4
+      - name: Create GitHub Release & Upload APK
+        uses: softprops/action-gh-release@v2
         with:
-          name: novel-app-apk
-          path: build/app/outputs/flutter-apk/*.apk
+          tag_name: v1.0.0
+          name: "Novel App v1.0.0"
+          files: build/app/outputs/flutter-apk/app-release.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
