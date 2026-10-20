@@ -1,28 +1,8 @@
-# novel_app
+# Novel App (Flutter)
 
-اپلیکیشن خواندن رمان با تم گیمینگ فارسی — Flutter Starter
+Dark carbon/red themed novel reading app.
 
-## ساختار
-- `lib/main.dart` — نقطه شروع برنامه با صفحه خانه، لیست رمان‌ها و صفحه‌نمایش جزئیات
-- `SPEC.md` — مشخصات و نقشه راه
-- `pubspec.yaml` — وابستگی‌ها
-
-## اجرا
-```bash
-flutter pub get
-flutter run
-```
-
-## قابلیت‌های نسخه اولیه
-- رابط کاربری راست‌به‌چپ (RTL) با فونت فارسی
-- تم تیره گیمینگ (بنفش/فیروزه‌ای نئونی)
-- لیست رمان‌ها با کارت‌های گرافیکی
-- صفحه جزئیات رمان و خواندن فصل‌ها
-
-
-## نکات UI پروتوتایپ
-- تم: کربنی (پس‌زمینه تیره #121416) با اکسنت قرمز گیمینگ (#E53935) — Material 3 Dark.
-- جهت کل اپ RTL است (`Directionality` در builder ریشه).
-- صفحات: Splash → Login (موبایل+رمز) → Home با ۳ تب (تکمیل‌شده/آنلاین/پیش‌فروش) → Novel Details / Online Chapters (بج قفل پولی/رایگان) → Reader (فونت ± و حالت شب) → Bottom Nav (نمایه، پشتیبانی، ارتقای حساب) و لیست تیکت‌ها.
-- داده‌ها Mock و در `MockData` داخل main.dart هستند؛ هیچ بک‌اند یا درگاه پرداختی پیاده نشده.
-- **سینتکس main.dart به‌صورت دستی بازبینی شده (بالانس آکولاد/پرانتز/براکت، presence همه کلاس‌ها). ابزار `dart` در محیط ساخت در دسترس نبود؛ پیش از کامپایل نهایی `flutter pub get && flutter analyze` را اجرا کنید.**
+## Build
+1. Unzip, open terminal in the folder.
+2. `flutter pub get`
+3. `flutter run` (connect device/emulator) or `flutter build apk`

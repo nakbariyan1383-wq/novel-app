@@ -2,8 +2,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:novel_app/main.dart';
 
 void main() {
-  testWidgets('splash renders app title', (tester) async {
+  testWidgets('App renders home page', (WidgetTester tester) async {
     await tester.pumpWidget(const NovelApp());
-    expect(find.text('رومان‌ورس'), findsWidgets);
+    expect(find.text('NovelApp'), findsOneWidget);
+    expect(find.byType(TabBar), findsOneWidget);
   });
 }

@@ -1,0 +1,4 @@
+#!/bin/sh
+# Gradle start up script stub - install Gradle or run 'flutter build' via Flutter tool
+echo "This is a stub gradlew. Use Flutter tool or a real Gradle wrapper."
+exit 1
