@@ -87,7 +87,7 @@ class HomePage extends StatelessWidget {
                       child: const Icon(Icons.menu_book, color: Colors.white),
                     ),
                     title: Text(n.title, style: const TextStyle(fontWeight: FontWeight.bold)),
-                    subtitle: Text('\${n.author} • \${n.chapters} فصل',
+                    subtitle: Text('${n.author} • ${n.chapters} فصل',
                         style: const TextStyle(color: Colors.grey)),
                     trailing: const Icon(Icons.chevron_right, color: kRed),
                     onTap: () => Navigator.push(context,
